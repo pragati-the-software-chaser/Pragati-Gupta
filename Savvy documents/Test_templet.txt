@@ -1,0 +1,11 @@
+Question1 : The EXISTS keyword will be true if Any row in the subquery meets the condition only
+Option1 : True
+Option2 : False
+Correct Answer : Yes
+
+Question2:All aggregate functions except _____ ignore null values in their collection.
+Option1 :  Count 
+Option2 :   Count(*)
+Option3 :  Avg
+Option4 :   Primary key
+Correct Answer : Sum

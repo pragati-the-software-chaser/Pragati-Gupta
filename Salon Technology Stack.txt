@@ -1,0 +1,9 @@
+Technology Stack
+1)HTML5
+2)CSS
+3)Javascript
+4)Python
+5)Bootstrap
+6)Flask
+7)Mysql
+
