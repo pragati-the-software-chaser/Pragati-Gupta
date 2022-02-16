@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/hr_dashboard.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <nav class="navbar shadow-lg ">
+        <div class="container-fluid" >
+          <a class="navbar-brand" href="#">
+            <img src="/static/image/logo.jpg" alt="" width="90" height="50" class="d-inline-block align-text-top shadow-lg">
+            Hello Fresh
+          </a>
+          <!--start nav_bar-->
+            <nav class="navbar navbar-expand-lg  ">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Log_out
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#" >Profile</a></li>
+            <li><a class="dropdown-item" href="#">Search</a></li>
+            <li><a class="dropdown-item" href="#">Goals</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Awards</a></li>
+            <li><a class="dropdown-item" href="/">Log out</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">About_US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact_US</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        </div>
+      </nav>
+      <!--Nav Bar end-->
+      <div class="management"><b>HR MANAGEMENT SYSTEM</b></div>
+<div class="midsection">
+<!--Start add emp-->
+<!-- first Button trigger modal -->
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Add Employees
+</button>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Add Employees</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <!--start add employee modal-->
+        <form action="/add_employee"  method="post">
+          <div class="mb-3">
+            <label for="eemail1" class="form-label">Email</label>
+            <input type="email" class="form-control" name="eemail1" id="eemail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="fname" class="form-label">Fisrt Name</label>
+            <input type="text" class="form-control" name="fname" id="fname" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="lname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" name="lname" id="lname">
+          </div>
+          <div class="mb-3">
+            <label for="dname" class="form-label">Department Id</label>
+            <input type="text" class="form-control" name="dname" id="dname">
+          </div>
+          <div class="mb-3">
+            <label for="isadmin" class="form-label">Admin</label>
+
+            <input type="text" class="form-control" name="isadmin" id="isadmin">
+          </div>
+        <!--end add employee modal-->
+      <div class="modal-footer">
+        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+    </div>
+  </div>
+</div>
+<!--end add emp-->
+<!--Start Update emp-->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+  Update Employees Table
+</button>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel1">Update Data</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <!--start add employee modal-->
+       <form action="/update_employee"  method="post">
+        <div class="mb-3">
+          <label for="eemail1" class="form-label">Email</label>
+          <input type="email" class="form-control" name="eemail2" id="eemail2" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="fname" class="form-label">Fisrt Name</label>
+          <input type="text" class="form-control" name="fname2" id="fname2" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="lname" class="form-label">Last Name</label>
+          <input type="text" class="form-control" name="lname2" id="lname2">
+        </div>
+        <div class="mb-3">
+          <label for="dname" class="form-label">Department Id</label>
+          <input type="text" class="form-control" name="dname2" id="dname2">
+        </div>
+        <div class="mb-3">
+          <label for="isadmin" class="form-label">Admin</label>
+
+          <input type="text" class="form-control" name="isadmin2" id="isadmin2">
+        </div>
+      <!--end add employee modal-->
+    <div class="modal-footer">
+      <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+        <!--end add employee modal-->
+      </div>
+    </div>
+  </div>
+</div>
+<!--end update emp-->
+
+<!--start Delete emp-->
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+  Delete Employees Table
+</button>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabe2">Delete Data</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <!--delete employee modal-->
+       <form action="/delete_employee"  method="post">
+        <div class="mb-3">
+          <label for="eemail1" class="form-label">Email</label>
+          <input type="email" class="form-control" name="eemail3" id="eemail3" aria-describedby="emailHelp">
+        </div>
+      <!--end add employee modal-->
+    <div class="modal-footer">
+      <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+        <!--end add employee modal-->
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+<!--end Delete emp-->
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Emp_id</th>
+            <th scope="col">Email Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Department Id</th>
+            <th scope="col">Role Id</th>
+            <th scope="col">Is Admin</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for employee in session['Employees'] %}
+          <tr>
+            <th scope="row">{{employee[0]}}</th>
+            <td>{{employee[1]}}</td>
+            <td>{{employee[3]}}</td>
+            <td>{{employee[4]}}</td>
+            <td>{{employee[6]}}</td>
+            <td>{{employee[7]}}</td>
+            <td>{{employee[8]}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+    </div>
+
+      <!--start footer-->
+<br>
+<br>
+<div class="footer">
+    <div class="card text-center">
+      <div class="card-header shadow-lg">
+        <ul class="nav nav-tabs card-header-tabs ">
+          <li class="nav-item">
+            <a class="nav-link "  href="#">Facebook</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Instagram</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Twitter</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-body">
+        <br>    
+        <h5 class="card-title">Hello Fresh</h5>
+      </div>
+    </div>
+    </div>
+    <br>
+     <!--end footer-->
+    <!--Bootstarp-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+</body>
+</html>

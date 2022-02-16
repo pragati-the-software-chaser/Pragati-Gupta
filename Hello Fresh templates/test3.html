@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <title>hi</title>
+<head>
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<title>hi</title>
+<body>
+
+
+
+<div class="card">
+<h2 style="text-align:center">Product Card</h2>
+  <img src="/w3images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Tailored Jeans</h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button>Add to Cart</button></p>
+</div>
+
+<button type="button" class="inc"><span class="offscreen">-</span></button>
+<input id="pc_qty_f9d8f11b-0c0f-48c8-9797-32b3e1963189" type="number" fd-product-quantity="" name="pc_qty_quantity" maxlength="4" value="3">
+<button type="button" class="dec"><span class="offscreen">+</span></button>
+
+
+<div class="col-6">
+  <ul class="pagination justify-content-end set_quantity">
+  <li class="page-item">
+  <button class="page-link " onclick="decreaseNumber('textbox1','itemval1')"> <i class="fas fa-minus"></i> </button>
+  </li>
+  <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox1" >
+  </li>
+  <li class="page-item">
+  <button class="page-link" onclick="increaseNumber('textbox1','itemval1')"> <i class="fas fa-plus"></i></button>
+  </li>
+  </ul>
+  </div>
+</body>
+</html>
